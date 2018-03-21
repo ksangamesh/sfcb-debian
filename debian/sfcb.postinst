@@ -1,0 +1,6 @@
+#!/bin/sh -e
+
+# Rebuilding CIM repository
+sfcbrepos -f
+
+#DEBHELPER#

@@ -1,0 +1,15 @@
+Description: Change the shebang due to bashism included in the script.
+Author: Thierry Carrez <thierry.carrez@ubuntu.com>
+Origin: Ubuntu
+Last-Update: 2010-06-28
+
+Index: sblim-sfcb-1.4.8/xmltest
+===================================================================
+--- sblim-sfcb-1.4.8.orig/xmltest
++++ sblim-sfcb-1.4.8/xmltest
+@@ -1,4 +1,4 @@
+-#!/bin/sh
++#!/bin/bash
+ # ============================================================================
+ # xmltest
+ #

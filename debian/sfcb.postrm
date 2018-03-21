@@ -1,0 +1,20 @@
+#!/bin/sh -e
+
+#DEBHELPER#
+
+
+case "$1" in
+	remove)
+		# Remove CIM repository
+		rm -rf /var/lib/sfcb
+	;;
+
+	purge|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+		# Nothing to do here
+	;;
+
+	*)
+		echo "$0 called with unknown argument \`$1'" >&2
+		exit 1
+	;;
+esac

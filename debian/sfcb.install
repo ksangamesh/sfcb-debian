@@ -1,0 +1,17 @@
+debian/sfcb.cfg etc/sfcb/
+debian/tmp/usr/bin/sfcbmof usr/bin/
+debian/tmp/usr/bin/sfcbmofpp usr/bin/
+debian/tmp/usr/bin/sfcbrepos usr/bin/
+debian/tmp/usr/bin/sfcbstage usr/bin/
+debian/tmp/usr/bin/sfcbunstage usr/bin/
+debian/tmp/usr/bin/sfcbuuid usr/bin/
+debian/tmp/usr/bin/sfcbdump usr/bin/
+debian/tmp/usr/bin/sfcbinst2mof usr/bin/
+debian/tmp/usr/lib/sfcb/lib*.so* usr/lib/sfcb/
+debian/tmp/usr/sbin/sfcbd usr/sbin/
+debian/tmp/usr/share/sfcb/genSslCert.sh usr/share/sfcb/
+debian/tmp/usr/share/sfcb/getSchema.sh usr/share/sfcb/
+debian/tmp/var/lib/sfcb/stage/default.reg var/lib/sfcb/stage/
+debian/tmp/var/lib/sfcb/stage/mofs/indication.mof var/lib/sfcb/stage/mofs/
+debian/tmp/var/lib/sfcb/stage/mofs/root/interop/20_indication.mof var/lib/sfcb/stage/mofs/root/interop/
+debian/tmp/var/lib/sfcb/stage/mofs/root/interop/10_interop.mof var/lib/sfcb/stage/mofs/root/interop/

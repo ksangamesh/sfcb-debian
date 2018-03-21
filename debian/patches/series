@@ -1,0 +1,5 @@
+01-fix-systemddir.patch
+02-fix-strncpy_kind.patch
+03-cim-schema-location.diff
+04-xmltest-uses-bash.diff
+05-automake_srcdir.patch

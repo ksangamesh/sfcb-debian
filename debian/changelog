@@ -1,0 +1,156 @@
+sblim-sfcb (1.4.9-1~deb1) UNRELEASED; urgency=medium
+
+  * built for Debian 9
+
+ -- Sangamesh Koradhanyamath <sangamesh_koradhanya@dell.com>  Wed, 21 Mar 2018 16:32:48 +0530
+
+sblim-sfcb (1.4.9-0ubuntu1) zesty; urgency=medium
+
+  * New upstream snapshot.
+  * Bump compat and dh to 9
+  * Bump standards to 3.9.8.
+  * Use dh_prep instead of dh_clean -k
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Sun, 15 Jan 2017 16:08:32 +0530
+
+sblim-sfcb (1.4.8-0ubuntu2) wily; urgency=medium
+
+  * Fix FTBFS with GCC 5.
+
+ -- Logan Rosen <logan@ubuntu.com>  Tue, 20 Oct 2015 23:23:54 -0400
+
+sblim-sfcb (1.4.8-0ubuntu1) utopic; urgency=low
+
+  * new upstream release (LP: #1335907)
+  * new features:
+    - [sfcb-tix:#99] Add config property enableSslCipherServerPref
+    - [sfcb-tix:#101] Add config property indicationCurlUseExpect100
+    - [sfcb-tix:#102] Add config property indicationCurlHonorRedirect
+    - [sfcb-tix:#105] Add config property embeddedObjectEncoding
+    - [sfcb-tix:#86] Support configurable SSL Diffie Hellman parameters file
+    - [sfcb-tix:#87] Support configurable SSL ECDH elliptic curve name
+    - [sfcb-tix:#76] Identify running SFCB processes in ps output
+  * bug fixes:
+    - [sfcb-tix:#94] Increase sigChldWaitTime
+    - [sfcb-tix:#95] Do not release pthread lock prior to stopBroker() exit
+    - [sfcb-tix:#89] Gracefully handle providers doing abort()
+    - [sfcb-tix:#96] Provider should close req handler on shutdown
+    - [sfcb-tix:#98] sfcbmofpp segfaults if mof file ends with block comment 
+      without newline
+    - [sfcb-tix:#100] Fix some compiler warnings & errors on newer distros
+    - [sfcb-tix:#103] Unsafe usage of strncpy in providerRegister.c
+    - [sfcb-tix:#61] classProviderSf.c SIGSEGV if repo is not initialized
+    - [sfcb-tix:#63] Improve NamespaceProvider and ClassProvider Consistency
+    - [sfcb-tix:#66] SFCB_TRACE_VAR should be more restrictive
+    - [sfcb-tix:#60] fix providerMgr trace for localconnect
+    - [sfcb-tix:#68] reinitialize select timeout in SSL handshake
+    - [sfcb-tix:#79] sfcc cannot reconnect with sfcb if sfcb restarts 
+      [bugs:#2663]
+    - [sfcb-tix:#69] Fix logger for long-lived clients, was: 
+      "#2347 Don't spawn logger for clients"
+    - [sfcb-tix:#72] Make systemddir configurable
+    - [sfcb-tix:#74] providerRegister: check for and prevent buffer overflows
+    - [sfcb-tix:#75] fileRepository: show which directory could not be opened
+    - [sfcb-tix:#78] Missing null check in ift_getObjectPath, 
+      transposed debug stmts in memAlloc
+    - [sfcb-tix:#78] Simplify mutex handling in instance.c
+    - [sfcb-tix:#77] Fix prototype for stopBroker
+    - [sfcb-tix:#80] sfcc cannot reconnect with sfcb
+ -- Kent Baxley <kent.baxley@canonical.com>  Wed, 25 Jun 2014 11:38:45 -0500
+
+sblim-sfcb (1.4.6-0ubuntu4) trusty; urgency=low
+
+  * Use dh-autoreconf for newer arches, resolving FTBFS.
+    - Work around automake syntax;
+    - Add missing lib to link.
+
+ -- Daniel T Chen <crimsun@ubuntu.com>  Fri, 24 Jan 2014 12:35:05 -0500
+
+sblim-sfcb (1.4.6-0ubuntu3) trusty; urgency=low
+
+  * Fix one more build dep.  LP: #1262338
+
+ -- Kent Baxley <kent.baxley@canonical.com>  Tue, 17 Dec 2013 13:40:27 -0600
+
+sblim-sfcb (1.4.6-0ubuntu2) trusty; urgency=low
+
+  * Fix build dep in control file. 
+
+ -- Kent Baxley <kent.baxley@canonical.com>  Tue, 17 Dec 2013 13:26:12 -0600
+
+sblim-sfcb (1.4.6-0ubuntu1) trusty; urgency=low
+
+  * New upstream release
+
+ -- Kent Baxley <kent.baxley@canonical.com>  Mon, 16 Dec 2013 13:18:52 -0600
+
+sblim-sfcb (1.3.8-0ubuntu2) oneiric; urgency=low
+
+  * Rebuild for OpenSSL 1.0.0.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 25 May 2011 22:39:05 +0100
+
+sblim-sfcb (1.3.8-0ubuntu1) maverick; urgency=low
+
+  * New upstream release
+  * Packaging format changed from 1.0 to 3.0 (quilt)
+  * Add missing man pages for getSchema and genSslCert
+  * Add missing binary sfcbinst2mof
+  * flex and unzip added as dependencies, because needed at build time by
+    configure
+
+ -- Guillaume BOTTEX <guillaumebottex@uxsystem.net>  Mon, 7 Jun 2010 11:27:00 +0900
+
+sblim-sfcb (1.3.4-0ubuntu2) karmic; urgency=low
+
+  * debian/rules, debian/control: Enable SLP agent support
+  * debian/sfcb.install: Install all libs rather than relying on sfcb.links
+    to create the links
+
+ -- Thierry Carrez <thierry.carrez@ubuntu.com>  Thu, 20 Aug 2009 11:19:03 +0200
+
+sblim-sfcb (1.3.4-0ubuntu1) karmic; urgency=low
+
+  * New upstream release (LP: #394235)
+  * debian/control: Add a version to the debhelper build dependency
+
+ -- Thierry Carrez <thierry.carrez@ubuntu.com>  Thu, 16 Jul 2009 15:47:22 +0200
+
+sblim-sfcb (1.3.3-0ubuntu1) karmic; urgency=low
+
+  * New upstream release.
+  * debian/rules: Removed rpath hacks, SFCB default build handles that now.
+  * Removed 1934753-remove-assignment.diff, now upstream.
+  * Refreshed patch cim-schema-location.diff
+
+ -- Thierry Carrez <thierry.carrez@ubuntu.com>  Mon, 08 Jun 2009 12:04:49 +0200
+
+sblim-sfcb (1.3.0-0ubuntu4) jaunty; urgency=low
+
+  * debian/sfcb.init: Use retry schedule in start-stop-daemon --stop to kill
+    sfcbd if it doesn't stop when nicely asked (LP: #344697)
+
+ -- Thierry Carrez <thierry.carrez@ubuntu.com>  Mon, 23 Mar 2009 11:51:52 +0100
+
+sblim-sfcb (1.3.0-0ubuntu3) jaunty; urgency=low
+
+  * debian/sfcb.init: Export /etc/default/sfcb variables so that they are
+    not ignored by sfcb (LP: #334812)
+
+ -- Thierry Carrez <thierry.carrez@ubuntu.com>  Mon, 02 Mar 2009 10:40:46 +0000
+
+sblim-sfcb (1.3.0-0ubuntu2) intrepid; urgency=low
+
+  * debian/sfcb.install: Do not install incorrect PAM configuration anymore,
+    let SFCB fallback on /etc/pam.d/other (LP: #262455)
+  * debian/sfcb.init: Fix status action so that it doesn't always report SFCB
+    as started (LP: #262635)
+  * debian/control: added dep on lsb-base to be able to use status_of_proc
+
+ -- Thierry Carrez <thierry.carrez@ubuntu.com>  Wed, 24 Sep 2008 11:52:27 +0200
+
+sblim-sfcb (1.3.0-0ubuntu1) intrepid; urgency=low
+
+  * Initial Release.
+
+ -- Thierry Carrez <thierry.carrez@ubuntu.com>  Wed, 27 Aug 2008 11:09:44 +0200

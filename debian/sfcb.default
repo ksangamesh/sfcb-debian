@@ -1,0 +1,54 @@
+# SFCB_TRACE=[0..4]
+# Specifies the level of trace/debug messages for sfcb.
+# Valid values are 0 (no trace messages), or 1 (key trace messages only)
+# to 4 (all messages). If not set, a default trace level of 1 will be
+# assumed for tracing.
+# SFCB_TRACE=1
+
+# SFCB_COMPONENT_TRACE=value
+# SFCB_TRACE level is used in conjunction with sfcb's component-level tracing
+# to control the level of detail of trace messages to display within each
+# component. value is an OR-ed bitmask integer defining which component to
+# trace:
+#		providerMgr		     1 (0x00001)
+#		providerDrv		     2 (0x00002)
+#		cimxmlProc		     4 (0x00004)
+#		httpDaemon		     8 (0x00008)
+#		upCalls			    16 (0x00010)
+#		encCalls		    32 (0x00020)
+#		ProviderInstMgr		    64 (0x00040)
+#		providerAssocMgr	   128 (0x00080)
+#		providers		   256 (0x00100)
+#		indProvider		   512 (0x00200)
+#		internalProvider	  1024 (0x00400)
+#		objectImpl		  2048 (0x00800)
+#		xmlIn			  4096 (0x01000)
+#		xmlOut			  8192 (0x02000)
+#		sockets			 16384 (0x04000)
+#		memoryMgr		 32768 (0x08000)
+#		msgQueue		 65536 (0x10000)
+#		xmlParsing		131072 (0x20000)
+#		responseTiming		262144 (0x40000)
+# A useful value to try that reveals the internal workings of sfcbd when
+# processing a CIM request (but also does not generate too many messages) is
+# 2019 (providerMgr+providerDrv+encCalls+ProviderInstMgr+providerAssocMgr+
+# providers+indProvider+internalProvider).
+# SFCB_COMPONENT_TRACE=0
+
+# SFCB_TRACE_FILE=/path/to/file
+# By default sfcb trace messages are written to STDERR.
+# Setting this envorinment variable causes the trace messages to be
+# written to a file instead.
+# SFCB_TRACE_FILE=
+
+# SBLIM_TRACE=[0..4]
+# Specifies the level of trace/debug messages for SBLIM providers.
+# Valid values are 0 (no trace messages), or 1 (key trace messages only)
+# to 4 (all messages).
+# SBLIM_TRACE=0
+
+# SBLIM_TRACE_FILE=/path/to/file
+# By default SBLIM provider trace messages are written to STDERR.
+# Setting this environment variable causes the trace messages to be
+# written to a file instead.
+# SBLIM_TRACE_FILE=

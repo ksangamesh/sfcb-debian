@@ -1,0 +1,3 @@
+debian/tmp/usr/bin/wbemcat usr/bin/
+debian/tmp/usr/bin/xmltest usr/bin/
+debian/tmp/usr/share/sfcb/stageschema.sh usr/share/sfcb/

@@ -1,0 +1,36 @@
+Source: sblim-sfcb
+Priority: optional
+Section: net
+Build-Depends: debhelper (>=9),
+	dh-autoreconf,
+	libcurl4-openssl-dev,
+	libssl-dev,
+	libslp-dev,
+	libcimcclient0-dev (>=2.2.0),
+	libpam0g-dev,
+	flex,
+	unzip,
+        libcmpicppimpl0-dev (>=2.0.0),
+        libsfcutil0-dev (>=1.0.0)
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Dave Heller <hellerda@us.ibm.com>
+Standards-Version: 3.9.8
+
+Package: sfcb
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, cim-schema (>= 2.17), lsb-base (>= 3.2-14)
+Suggests: sblim-cmpi-base
+Description: Small Footprint CIM Broker
+ The small footprint CIM broker (SFCB) is part of the SBLIM project
+ (Standards Based Linux Instrumentation for Manageability). SFCB is a CIM
+ server for resource-constrained and embedded environments. A CIM daemon
+ (aka CIMOM) responds to CIM/WBEM client requests for system management data
+ and performs system management tasks.
+
+Package: sfcb-test
+Architecture: all
+Depends: ${perl:Depends}, ${misc:Depends}
+Suggests: sfcb
+Description: Small Footprint CIM Broker test tools
+ The SFCB test tools (wbemcat and xmltest) allow testing of CIM Brokers by
+ feeding raw XML to CIM brokers and compare results to pre-saved stock answers.

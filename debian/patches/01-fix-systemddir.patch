@@ -1,0 +1,12 @@
+Fixes SYSTEMDDIR path in Makefile
+--- a/configure.ac
++++ b/configure.ac
+@@ -159,7 +159,7 @@
+ AC_DISABLE_STATIC
+ 
+ if test "$SYSTEMDDIR" == "" ; then
+-  SYSTEMDDIR=$(prefix)/share/systemd
++  SYSTEMDDIR=$(pkg-config systemd --variable=systemdsystemunitdir)
+ fi
+ AC_SUBST(SYSTEMDDIR)
+ 
